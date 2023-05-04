@@ -1,0 +1,27 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xmlns:context="http://www.springframework.org/schema/context"-->
+<!--       xmlns:mvc="http://www.springframework.org/schema/mvc"-->
+<!--       xsi:schemaLocation="http://www.springframework.org/schema/beans-->
+<!--        http://www.springframework.org/schema/beans/spring-beans.xsd-->
+<!--         http://www.springframework.org/schema/context-->
+<!--         https://www.springframework.org/schema/context/spring-context.xsd-->
+<!--          http://www.springframework.org/schema/mvc-->
+<!--          https://www.springframework.org/schema/mvc/spring-mvc.xsd">-->
+<!--    <context:component-scan base-package="com.qiao"/>-->
+<!--    &lt;!&ndash;    视图解析器&ndash;&gt;-->
+<!--    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+<!--        <property name="prefix" value="/WEB-INF/jsp/"/>-->
+<!--        <property name="suffix" value=".jsp"/>-->
+<!--    </bean>-->
+<!--    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">-->
+<!--        -->
+<!--    </bean>-->
+<!--    &lt;!&ndash;json结果类型转换为自动结果类型转换&ndash;&gt;-->
+<!--    <mvc:annotation-driven/>-->
+<!--    &lt;!&ndash;    全部静态资源放行&ndash;&gt;-->
+<!--    <mvc:default-servlet-handler/>-->
+<!--    &lt;!&ndash;    局部资源放行 mapping指定文件为js及其子包，location去对应的路径去寻找&ndash;&gt;-->
+<!--    <mvc:resources mapping="/js/**" location="/js/" />-->
+<!--</beans>-->

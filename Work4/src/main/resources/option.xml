@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.Class.School">
+    <update id="Stupdate" parameterType="com.Class.Student">
+        update student set name=#{name},hours=#{hours},sid=#{sid} where id=#{id}
+    </update>
+    <select id="ScfindByname" parameterType="String" resultType="com.Class.School">
+        select * from school where schoolname = #{schoolname}
+    </select>
+    <delete id="StdeleteByid" parameterType="int">
+        delete from student where id=#{id}
+    </delete>
+    <insert id="Stinsert" parameterType="com.Class.Student">
+        insert into student values(#{name},#{hours},#{sid})
+    </insert>
+    <insert id="Scinsert" parameterType="com.Class.School">
+        insert into school values (#{name})
+    </insert>
+    <select id="Stfindall" resultType="com.Class.Student">
+        select * from student
+    </select>
+    <select id="ScfindByid" parameterType="int" resultType="com.Class.School">
+        select * from school where id=#{id}
+    </select>
+    <select id="Scfindall" resultType="com.Class.School">
+        select * from school
+    </select>
+    <select id="Stfindbyid" parameterType="int" resultType="com.Class.Student">
+        select * from student where id=#{id}
+    </select>
+    <select id="Stfindbyname" parameterType="String" resultType="com.Class.Student">
+        select * from student where name=#{name}
+    </select>
+    <select id="Imgfindbyname" parameterType="String" resultType="com.Class.Headimg">
+        select * from Stimgs where StName=#{StName}
+    </select>
+    <update id="updateImg" parameterType="com.Class.Headimg">
+        update Stimgs set ImgNo=#{ImgNo} where StName=#{StName}
+    </update>
+    <insert id="insertImg" parameterType="com.Class.Headimg">
+        insert into Stimgs values(#{ImgNo},#{StName})
+    </insert>
+    <delete id="deleteImg" parameterType="String">
+        delete from Stimgs where StName=#{StName}
+    </delete>
+    <select id="UfindByname" parameterType="String" resultType="com.Class.User">
+        select * from users where username=#{username}
+    </select>
+</mapper>
